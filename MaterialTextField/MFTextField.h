@@ -39,6 +39,11 @@ IB_DESIGNABLE
 @property (nonatomic) IBInspectable UIColor *placeholderColor;
 
 /**
+ * The color of the placeholder label when the text field is in focus.
+ */
+@property (nonatomic) IBInspectable UIColor *placeholderFocusColor;
+
+/**
  * Defaults to the first applicable font:
  * - the attributed placeholder font at the default placeholder size
  * - the text field font at the default placeholder size

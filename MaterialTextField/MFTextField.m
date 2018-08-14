@@ -86,6 +86,8 @@ static NSTimeInterval const MFDefaultAnimationDuration = 0.3;
 
     self.errorColor = [UIColor mf_redColor];
     self.errorFont = [self defaultErrorFont];
+
+    self.placeholderFocusColor = self.tintColor;
 }
 
 - (void)setupTextField
@@ -501,7 +503,7 @@ static NSTimeInterval const MFDefaultAnimationDuration = 0.3;
     UIColor *color;
 
     if (self.isFirstResponder) {
-        color = (self.hasError) ? self.errorColor : self.tintColor;
+        color = (self.hasError) ? self.errorColor : self.placeholderFocusColor;
     }
     else {
         color = self.placeholderColor;
